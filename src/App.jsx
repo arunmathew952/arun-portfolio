@@ -94,10 +94,7 @@ function App() {
               alt={site.logoAlt}
             />
           ) : (
-            <>
-              {site.logoText}
-              <span>✳</span>
-            </>
+            site.logoText
           )}
         </a>
         <button
@@ -417,7 +414,14 @@ function App() {
         </section>
         <section id="about" className="about section-pad">
           <div className="about-intro">
-            <span className="eyebrow">{"02 / A LITTLE ABOUT ME"}</span>
+            <div className="about-photo-col">
+              <span className="eyebrow">{"02 / A LITTLE ABOUT ME"}</span>
+              <img
+                className="about-photo"
+                src={site.aboutImage}
+                alt={site.aboutImageAlt}
+              />
+            </div>
             <div>
               <h2>
                 {"Curious by nature."}
